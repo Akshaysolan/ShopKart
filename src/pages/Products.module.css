@@ -1,0 +1,65 @@
+.page { padding: 2.5rem 0 4rem; }
+.header { margin-bottom: 1.5rem; }
+.title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; margin-bottom: 0.2rem; }
+.sub { color: var(--muted); font-size: 0.9rem; }
+
+.toolbar { display: flex; gap: 1rem; margin-bottom: 1.2rem; align-items: center; flex-wrap: wrap; }
+.searchBox {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.searchIcon { position: absolute; left: 0.9rem; font-size: 0.9rem; pointer-events: none; }
+.searchInput {
+  width: 100%;
+  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.92rem;
+  outline: none;
+  font-family: var(--font-body);
+  background: white;
+  transition: border-color 0.2s;
+}
+.searchInput:focus { border-color: var(--accent); }
+.clearBtn {
+  position: absolute; right: 0.9rem;
+  background: none; border: none;
+  color: var(--muted); font-size: 0.85rem;
+  padding: 2px 5px; border-radius: 4px;
+}
+.clearBtn:hover { color: var(--text); }
+
+.sortSelect {
+  padding: 0.68rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  background: white;
+  outline: none;
+  color: var(--text);
+}
+
+.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.filterBtn {
+  padding: 0.4rem 1.1rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.filterBtn:hover, .filterBtn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.4rem; }
+
+.empty { text-align: center; padding: 5rem 0; color: var(--muted); }
+.emptyIcon { font-size: 3rem; margin-bottom: 1rem; }
+.empty h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+.empty p { font-size: 0.9rem; }

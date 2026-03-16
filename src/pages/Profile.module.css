@@ -1,0 +1,61 @@
+.page { padding: 2.5rem 0 4rem; }
+.grid { display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: start; }
+
+.profileCard {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: sticky;
+  top: 80px;
+}
+.avatarLarge {
+  width: 80px; height: 80px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto 1rem;
+}
+.name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; }
+.email { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.3rem; }
+.joined { color: var(--muted); font-size: 0.78rem; margin-bottom: 1.5rem; }
+
+.stats { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--surface); border-radius: 10px; }
+.stat { text-align: center; }
+.stat strong { display: block; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; }
+.stat span { font-size: 0.75rem; color: var(--muted); }
+.statDiv { width: 1px; height: 30px; background: var(--border); }
+
+.actions { display: flex; flex-direction: column; }
+.logoutBtn { background: #fef2f2; color: var(--danger); border: 1.5px solid #fecaca; }
+.logoutBtn:hover { background: #fee2e2; }
+
+.main { }
+.sectionTitle { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; }
+
+.emptyOrders { text-align: center; padding: 3rem; background: white; border-radius: var(--radius); color: var(--muted); }
+
+.miniOrder {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+}
+.miniOrderHeader { display: flex; justify-content: space-between; margin-bottom: 0.4rem; }
+.miniOrderId { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; }
+.miniOrderTotal { font-weight: 700; color: var(--accent); }
+.miniOrderItems { font-size: 0.88rem; color: var(--text); margin-bottom: 0.3rem; }
+.miniOrderMeta { font-size: 0.78rem; color: var(--muted); }
+
+.viewAll { display: inline-block; color: var(--accent); font-size: 0.88rem; font-weight: 600; margin-top: 0.5rem; }
+.viewAll:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .profileCard { position: static; }
+}

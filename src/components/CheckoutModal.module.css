@@ -1,0 +1,175 @@
+.header {
+  background: var(--primary);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+.closeBtn {
+  background: none; border: none;
+  color: rgba(255,255,255,0.7); font-size: 1.1rem;
+  padding: 0.3rem 0.6rem; border-radius: 6px;
+  transition: background 0.15s;
+}
+.closeBtn:hover { background: rgba(255,255,255,0.1); }
+
+.body { padding: 1.25rem 1.5rem; }
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+  margin-top: 1.2rem;
+}
+.sectionLabel:first-child { margin-top: 0; }
+
+.summary {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+.summaryItems { margin-bottom: 0.5rem; }
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.summaryTotal {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+.payTabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.payTab {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  transition: all 0.18s;
+  background: white;
+}
+.payTab:hover { border-color: var(--upi); }
+.payTab.active { border-color: var(--upi); background: #f5eeff; }
+.tabIcon { font-size: 1.3rem; display: block; }
+.tabLabel { font-size: 0.72rem; font-weight: 600; color: var(--muted); margin-top: 3px; }
+.payTab.active .tabLabel { color: var(--upi); }
+
+.panel { margin-top: 0.2rem; }
+.panelLabel { font-size: 0.8rem; color: var(--muted); font-weight: 500; margin-bottom: 0.6rem; }
+
+.upiApps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.upiApp {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 0.55rem 0.4rem;
+  text-align: center;
+  transition: all 0.18s;
+  background: white;
+}
+.upiApp:hover, .upiApp.selected { border-color: var(--upi); background: #f5eeff; }
+.appIcon { font-size: 1.4rem; display: block; }
+.appName { font-size: 0.65rem; font-weight: 600; color: var(--muted); margin-top: 3px; }
+.upiApp.selected .appName { color: var(--upi); }
+
+.upiRow { display: flex; gap: 0.5rem; align-items: center; }
+.verifyBtn {
+  background: var(--upi);
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.verifyBtn:hover:not(:disabled) { background: #6320d4; }
+.verifyBtn:disabled { opacity: 0.6; }
+.verifyBtn.verified { background: var(--success); }
+
+.codBox {
+  background: #e8f5e9;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.centerScreen {
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.processingTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.processingText { color: var(--muted); font-size: 0.88rem; }
+
+.successIcon {
+  width: 72px; height: 72px;
+  background: #e8f5e9;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.25rem;
+  animation: popIn 0.4s cubic-bezier(.4,0,.2,1);
+}
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--success);
+  margin-bottom: 0.5rem;
+}
+.successText { color: var(--muted); font-size: 0.88rem; }
+.orderIdBox {
+  background: var(--surface);
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--upi);
+  margin: 0.8rem 0 0.3rem;
+}
